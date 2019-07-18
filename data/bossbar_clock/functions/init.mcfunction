@@ -1,4 +1,4 @@
-scoreboard objectives add dummy dummy
+scoreboard objectives add bossbar_clock dummy
 scoreboard objectives add showclock dummy
 bossbar add clock ""
 bossbar set minecraft:clock visible true
