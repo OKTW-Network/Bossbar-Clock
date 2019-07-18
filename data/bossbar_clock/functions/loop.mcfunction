@@ -2,6 +2,7 @@ bossbar set minecraft:clock players @a[scores={showclock=1}]
 execute store result bossbar minecraft:clock value run time query daytime
 execute store result score #daytime bossbar_clock run time query daytime
 execute store result score #day bossbar_clock run time query day
+execute as @a at @s if score #daytime bossbar_clock matches 5 run playsound minecraft:entity.experience_orb.pickup neutral @s ~ ~ ~ 1 1 1
 execute if score #daytime bossbar_clock matches 0..4000 run bossbar set clock name [{"text":"第 ","color":"yellow"},{"score":{"name":"#day","objective":"bossbar_clock"},"color":"yellow"},{"text":" 天 早上","color":"yellow"}]
 execute if score #daytime bossbar_clock matches 0..4000 run bossbar set clock color green
 execute if score #daytime bossbar_clock matches 4001..8000 run bossbar set clock name [{"text":"第 ","color":"white"},{"score":{"name":"#day","objective":"bossbar_clock"},"color":"yellow"},{"text":" 天 中午","color":"yellow"}]
