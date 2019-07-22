@@ -1,4 +1,5 @@
 bossbar set minecraft:clock players @a[scores={showclock=1}]
+scoreboard players enable @a showclock
 execute store result bossbar minecraft:clock value run time query daytime
 execute store result score #daytime bossbar_clock run time query daytime
 execute store result score #day bossbar_clock run time query day
