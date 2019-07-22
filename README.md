@@ -11,3 +11,7 @@
 ## Switch clock on/off
 
 Set own score [showclock] to 1 to switch on bossbar clock.
+
+```text
+scoreboard players set <Your ID> showclock 1
+```
