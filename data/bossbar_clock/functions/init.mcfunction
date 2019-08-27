@@ -1,9 +1,9 @@
 scoreboard objectives add bossbar_clock dummy
 scoreboard objectives add showclock trigger
 bossbar add clock ""
-bossbar set minecraft:clock visible true
-bossbar set minecraft:clock max 24000
-bossbar set minecraft:clock style notched_6
+bossbar set bossbar_clock:clock visible true
+bossbar set bossbar_clock:clock max 24000
+bossbar set bossbar_clock:clock style notched_6
 summon minecraft:armor_stand ~ ~ ~ {CustomName:"[{\"text\":\"Bossbar Clock\",\"color\":\"gold\"}]",Tags:["clock_temp"]}
 execute as @e[tag=clock_temp] run say Bossbar Clock Initialized!
 kill @e[type=minecraft:armor_stand,tag=clock_temp]
