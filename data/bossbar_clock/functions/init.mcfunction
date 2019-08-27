@@ -1,6 +1,6 @@
 scoreboard objectives add bossbar_clock dummy
 scoreboard objectives add showclock trigger
-bossbar add clock ""
+bossbar add bossbar_clock:clock ""
 bossbar set bossbar_clock:clock visible true
 bossbar set bossbar_clock:clock max 24000
 bossbar set bossbar_clock:clock style notched_6
