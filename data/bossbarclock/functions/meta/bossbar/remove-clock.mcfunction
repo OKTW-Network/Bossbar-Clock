@@ -1,0 +1,1 @@
+bossbar remove bossbarclock:clock
