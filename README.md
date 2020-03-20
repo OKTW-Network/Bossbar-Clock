@@ -1,21 +1,44 @@
 
 # Bossbar_Clock
 
- A clock on the bossbar
+A clock on the bossbar.
 
-## Used scoreboard objective
+## Clock displaying
 
-1. bossbar_clock
-2. showclock
+The config file provides four options for display the clock:
 
-## Used bossbar
+1. `/trigger` command
+2. Holding a clock
+3. Inventory has a clock
+4. Always display the clock
 
-1. clock
+The path of the config file:
+`..\data\bossbarclock\functions\config`
 
-## Switch clock on/off
+### Command
 
-Set own score [showclock] to 1 to switch on bossbar clock.
+Use the `/trigger` command if you are not cheatable or not a server operator:  
+`/trigger showClock set 1` - Enable the clock  
+`/trigger showClock set 0` - Disable the clock  
+**Those command required config settings**
 
-```text
-scoreboard players set <Your ID> showclock 1
-```
+You can also use the command below if you have the permissions:  
+`/scoreboard players set <ID> showClock 1` - Enable the clock  
+`/scoreboard players set <ID> showClock 0` - Disable the clock
+
+## Required dependency
+
+* [Math integration](https://github.com/OKTW-Network/Math-integration)
+* [Creative utilities](https://github.com/OKTW-Network/Creative-utilities)
+
+## Compatibility information
+
+### Scoreboard objective
+
+* BossbarClock
+* showClock
+
+### Tags
+
+* InitializedBossbarclockScore
+* InitializedBossbarclockBossbar
