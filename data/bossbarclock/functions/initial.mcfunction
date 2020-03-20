@@ -5,7 +5,7 @@ function bossbarclock:check-version
 execute as @a[tag=!InitializedBossbarclockScore] run function bossbarclock:meta/scoreboard/set_player_score
 function bossbarclock:meta/scoreboard/set_score
 
-function bossbarclock:meta/bossbar/register
+function bossbarclock:meta/storage/register
 
 function bossbarclock:meta/bossbar/register
 execute as @a[tag=!InitializedBossbarclockBossbar] run function bossbarclock:meta/bossbar/set_player_visible
