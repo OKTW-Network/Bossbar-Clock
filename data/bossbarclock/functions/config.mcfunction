@@ -2,16 +2,16 @@
 # General                                  #
 ############################################
 
-# Allow version prompt print out
+# Allow version prompt print out while initializing
 # 0 = don't print anything, 1 = only print while version changed, 2 = always print version when /reload
 # integer, default: 2
 scoreboard players set #bossbarclock_print_version Config 2
 
-# Allow initial prompt print out
+# Allow initial prompt print out while initializing
 # boolean, default: 0
 scoreboard players set #bossbarclock_print_init Config 0
 
-# Allow config prompt print out
+# Allow config prompt print out while initializing
 # boolean, default: 0
 scoreboard players set #bossbarclock_print_config Config 0
 
@@ -26,15 +26,15 @@ scoreboard players set #bossbarclock_print_config Config 0
 # integer, default: 1
 scoreboard players set #bossbarclock_display_method Config 1
 
-# Allow toggle clock prompt print out
+# Allow toggle clock prompt print out while initializing
 # 0 = don't print anything, 1 = only print while display method is 0, 2 = print anyway
-# boolean, default: 1
+# integer, default: 1
 scoreboard players set #bossbarclock_print_toggle_clock Config 1
 
 # Enable real day cycle
 # make the start of day cycle more real
 # 0 = cycle start at morning(MC time tick: 0), 1 = cycle start at midnight(MC time tick: 18000)
-# boolean, default: 0
+# integer, default: 0
 scoreboard players set #bossbarclock_day_cycle_real Config 0
 
 # Enable 12-hour clock
