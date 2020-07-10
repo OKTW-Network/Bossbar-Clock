@@ -1,1 +1,1 @@
-scoreboard players set #alarm BossbarClock 0
+scoreboard players remove #alarm BossbarClock 0
