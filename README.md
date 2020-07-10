@@ -3,7 +3,9 @@
 
 A clock on the bossbar.
 
-## Clock displaying
+## Feature
+
+### Clock displaying
 
 The config file provides four options for display the clock:
 
@@ -12,10 +14,10 @@ The config file provides four options for display the clock:
 3. Inventory has a clock
 4. Always display the clock
 
-The path of the config file:
+The config file can be found by the path below:  
 `..\data\bossbarclock\functions\config`
 
-### Command
+#### Command
 
 Use the `/trigger` command if you are not cheatable or not a server operator:  
 `/trigger showClock set 1` - Enable the clock  
@@ -32,6 +34,10 @@ You can also use the command below if you have the permissions:
 * [Creative utilities](https://github.com/OKTW-Network/Creative-utilities)
 
 ## Compatibility information
+
+### Namespace
+
+* bossbarclock
 
 ### Scoreboard objective
 
