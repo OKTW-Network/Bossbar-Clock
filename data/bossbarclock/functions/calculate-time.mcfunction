@@ -4,9 +4,8 @@ scoreboard players operation #calculation_temp1 numeric /= #static_1000 numeric
 scoreboard players operation #calculation_temp2 numeric %= #static_1000 numeric
 
 # hour
-execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches ..12 run scoreboard players set #AM BossbarClock 1
-execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches 13.. run scoreboard players set #AM BossbarClock 0
-execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches 0 run scoreboard players set #calculation_temp1 numeric 12
+execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches ..11 run scoreboard players set #AM BossbarClock 1
+execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches 12.. run scoreboard players set #AM BossbarClock 0
 execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches 13.. run scoreboard players remove #calculation_temp1 numeric 12
 
 # minute
