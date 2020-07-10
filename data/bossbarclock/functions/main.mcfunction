@@ -12,7 +12,8 @@ execute store result score #day BossbarClock run time query day
 execute if score #bossbarclock_day_cycle_real Config matches 1 run function bossbarclock:real_day_cycle-day
 execute if score #bossbarclock_day_cycle_real Config matches 1 run function bossbarclock:real_day_cycle-time
 
-# sound effect
-execute if score #daytime BossbarClock matches 0 as @a[scores={showClock=1},predicate=minecraft:dimension-overworld] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~
+# alarm
+execute if score #daytime BossbarClock matches 0 if score #alarm BossbarClock matches 0 run function bossbarclock:alarm-start
+execute unless score #daytime BossbarClock matches 0 if score #alarm BossbarClock matches 1 run function bossbarclock:alarm-lift
 
 execute if entity @a[scores={showClock=1},predicate=minecraft:dimension-overworld] run function bossbarclock:bossbar/clock
