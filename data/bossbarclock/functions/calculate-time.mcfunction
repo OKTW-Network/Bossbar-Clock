@@ -1,20 +1,20 @@
-scoreboard players operation #calculation_temp1 numeric = #daytime BossbarClock
-scoreboard players operation #calculation_temp2 numeric = #daytime BossbarClock
-scoreboard players operation #calculation_temp1 numeric /= #static_1000 numeric
-scoreboard players operation #calculation_temp2 numeric %= #static_1000 numeric
+scoreboard players operation #1 calcu_temp = #daytime BossbarClock
+scoreboard players operation #2 calcu_temp = #daytime BossbarClock
+scoreboard players operation #1 calcu_temp /= #1000 num
+scoreboard players operation #2 calcu_temp %= #1000 num
 
 # hour
-execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches ..11 run scoreboard players set #AM BossbarClock 1
-execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches 12.. run scoreboard players set #AM BossbarClock 0
-execute if score #bossbarclock_time_12hr Config matches 1 if score #calculation_temp1 numeric matches 13.. run scoreboard players remove #calculation_temp1 numeric 12
+execute if score #bossbarclock_time_12hr Config matches 1 if score #1 calcu_temp matches ..11 run scoreboard players set #AM BossbarClock 1
+execute if score #bossbarclock_time_12hr Config matches 1 if score #1 calcu_temp matches 12.. run scoreboard players set #AM BossbarClock 0
+execute if score #bossbarclock_time_12hr Config matches 1 if score #1 calcu_temp matches 13.. run scoreboard players remove #1 calcu_temp 12
 
 # minute
-scoreboard players operation #calculation_temp2 numeric *= #static_100 numeric
-scoreboard players set #calculation_temp3 numeric 20
-scoreboard players operation #calculation_temp2 numeric /= #calculation_temp3 numeric
-scoreboard players set #calculation_temp3 numeric 12
-scoreboard players operation #calculation_temp3 numeric *= #calculation_temp2 numeric
-scoreboard players operation #calculation_temp3 numeric /= #static_1000 numeric
+scoreboard players operation #2 calcu_temp *= #100 num
+scoreboard players set #3 calcu_temp 20
+scoreboard players operation #2 calcu_temp /= #3 calcu_temp
+scoreboard players set #3 calcu_temp 12
+scoreboard players operation #3 calcu_temp *= #2 calcu_temp
+scoreboard players operation #3 calcu_temp /= #1000 num
 data merge storage bossbarclock:resources {time:{minute:[0]}}
-execute store result storage bossbarclock:resources time.minute[0] int 1 run scoreboard players get #calculation_temp3 numeric
-execute if score #calculation_temp3 numeric matches ..9 run data modify storage bossbarclock:resources time.minute prepend value 0
+execute store result storage bossbarclock:resources time.minute[0] int 1 run scoreboard players get #3 calcu_temp
+execute if score #3 calcu_temp matches ..9 run data modify storage bossbarclock:resources time.minute prepend value 0
