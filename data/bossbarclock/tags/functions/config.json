@@ -1,0 +1,7 @@
+{
+  "values": [
+    "bossbarclock:config",
+    "bossbarclock:meta/config/set_value",
+    "bossbarclock:meta/broadcast/config"
+  ]
+}

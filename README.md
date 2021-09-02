@@ -59,8 +59,3 @@ The clock is display at 12hr-clock by default, but make the clock display at 24h
 
 * BossbarClock
 * showClock
-
-### Tags
-
-* InitializedBossbarclockScore
-* InitializedBossbarclockBossbar

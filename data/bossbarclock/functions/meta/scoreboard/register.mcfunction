@@ -7,4 +7,6 @@ scoreboard objectives add VersionBbClockZ dummy
 scoreboard objectives add VersionBbClockA dummy
 
 scoreboard objectives add BossbarClock dummy
+scoreboard players remove #alarm BossbarClock 0
+
 scoreboard objectives add showClock trigger

@@ -1,5 +1,6 @@
 {
     "values":[
-		  "global:load"
+        "bossbarclock:check_and_run-initial",
+        "bossbarclock:check_and_run-setup"
     ]
 }
