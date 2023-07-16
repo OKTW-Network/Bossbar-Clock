@@ -1,3 +1,2 @@
-scoreboard players remove @s showClock 0
-
-tag @s add InitializedBossbarclockScore
+scoreboard players remove @s bossbarclock.showClock 0
+scoreboard players remove @s bossbarclock.clockStatus 0

@@ -1,7 +1,7 @@
 {
   "values": [
+    "bossbarclock:meta/scoreboard/config/register",
     "bossbarclock:config",
-    "bossbarclock:meta/config/set_value",
-    "bossbarclock:meta/broadcast/config"
+    "bossbarclock:meta/scoreboard/config/limit"
   ]
 }
