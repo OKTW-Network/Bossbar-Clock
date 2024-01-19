@@ -31,6 +31,11 @@ scoreboard players set #bossbarclock$display_method Config 1
 #  2: Always.
 scoreboard players set #bossbarclock$print_clock_toggle Config 1
 
+# Enable item frame clock display
+# Displays when looking at the clock in the item frame.
+# Boolean, default: 1
+scoreboard players set #bossbarclock$item_frame_clock_display Config 1
+
 # Enable orderless clock
 # Show an orderless clock while in other dimensions.
 # Boolean, default: 1
