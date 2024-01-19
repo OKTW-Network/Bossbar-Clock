@@ -31,6 +31,16 @@ scoreboard players set #bossbarclock$display_method Config 1
 #  2: Always.
 scoreboard players set #bossbarclock$print_clock_toggle Config 1
 
+# Alarm method
+# How the clock sounds the alarm when a new day comes.
+# integer, default: 3
+# values:
+#  0: Do not sound the alarm.
+#  1: When displaying the clock, and only heard by self.
+#  2: Based on 1, alarms by players who hold and display the clock can be heard by others.
+#  3: Based on 2, item frames can sound the alarm individually.
+scoreboard players set #bossbarclock$alarm_method Config 3
+
 # Enable item frame clock display
 # Displays when looking at the clock in the item frame.
 # Boolean, default: 1

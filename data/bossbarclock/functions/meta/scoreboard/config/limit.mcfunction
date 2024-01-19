@@ -2,6 +2,7 @@ execute unless score #bossbarclock$general.print_version Config matches 0..2 run
 
 execute unless score #bossbarclock$display_method Config matches 0..3 run scoreboard players set #bossbarclock$display_method Config 1
 execute unless score #bossbarclock$print_clock_toggle Config matches 0..2 run scoreboard players set #bossbarclock$print_clock_toggle Config 1
+execute unless score #bossbarclock$alarm_method Config matches 0..3 run scoreboard players set #bossbarclock$alarm_method Config 3
 execute unless score #bossbarclock$item_frame_clock_display Config matches 0..1 run scoreboard players set #bossbarclock$item_frame_clock_display Config 1
 execute unless score #bossbarclock$show_orderless Config matches 0..1 run scoreboard players set #bossbarclock$show_orderless Config 1
 execute unless score #bossbarclock$real_day_cycle Config matches 0..1 run scoreboard players set #bossbarclock$real_day_cycle Config 1
